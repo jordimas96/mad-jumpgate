@@ -1,0 +1,159 @@
+<!--                  Jordi Mas Parramon                 -->
+<!--            https://github.com/jordimas96            -->
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <title>Jordi Mas - Choose CV language</title>
+    <meta name="author" content="Jordi Mas Parramon">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/icons/jmas/groc-r.png">
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            color-scheme: dark;
+            background-color: hsl(60, 57%, 18%);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+
+            height: 100%;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        header {
+            padding: 0.7rem;
+        }
+        header > a {
+            display: inline-block;
+            border-radius: 50%;
+        }
+        header > a > .logo {
+            display: block;
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 50%;
+        }
+        section {
+            align-self: center;
+            text-align: center;
+
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+        .titol {
+            font-size: 4rem;
+            color: hsl(51, 100%, 85%);
+
+            margin-bottom: 4rem;
+            padding: 0 1rem;
+
+        }
+        .botons {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: fit-content;
+            margin: auto;
+        }
+        .botons .boto {
+            font-size: 2rem;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 1.5rem;
+            
+            background-color: hsla(0, 0%, 100%, 0.12);
+            color: white;
+        }
+
+        .boto.jugar {
+            background-color: #231f20;
+        }
+        .boto.itch {
+            background-color: #fa5c5c;
+            font-size: 1.75rem;
+        }
+        .boto.windows {
+            background-color: #0cb3ee;
+            font-size: 1.5rem;
+        }
+        .boto.youtube {
+            background-color: #ff0000;
+            font-size: 1.5rem;
+        }
+        .boto.info { }
+
+
+
+        footer .firma {
+            font-size: 1.2rem;
+            text-align: center;
+            color: gold;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+
+        .boing {
+            cursor: pointer;
+
+            transform-origin: center;
+            transform: scale(1);
+            transition: transform 0.1s, border-radius 0.3s;
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="boing">
+            <img class="logo" src="https://jordimas96.github.io/assets_repo/logos-jmas/yellow.png" alt="logo">
+        </a>
+    </header>
+
+    <section>
+        <div class="titol">
+            Mad Jumpgate
+        </div>
+
+        <div class="botons">
+            <a class="boto boing jugar" href="./webgl/">Jugar</a>
+            <a class="boto boing itch" href="https://jmaspgames.itch.io/mad-jumpgate">Jugar a itch.io</a>
+            <a class="boto boing windows" href="https://jordimas96.github.io/r/mad-jumpgate-download-windows">Descarregar<br>per a Windows</a>
+            <a class="boto boing youtube" href="https://youtu.be/TwJ3bpvQ4qA">Gameplay<br>a YouTube</a>
+            <a class="boto boing info" href="https://jordimas96.github.io/mad-jumpgate-info">Més informació</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="firma">Jordi Mas</div>
+    </footer>
+
+
+    <!-- Jordi Mas Parramon - xordimas@gmail.com - https://github.com/jordimas96 -->
+
+
+    <script>
+        if (!location.pathname.endsWith("index.html") && !location.pathname.endsWith("/"))
+            location.pathname += '/';
+        
+        function obrirCV(nomArxiu) {
+            location.assign(location.href + nomArxiu);
+        }
+        
+    </script>
+</body>
+</html>
