@@ -32,7 +32,13 @@
             justify-content: space-between;
         }
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 0;
             padding: 0.7rem;
+
+            background-color: hsla(0, 100%, 25%, 0.2);
             backdrop-filter: blur(30px);
         }
         header > a {
@@ -45,6 +51,15 @@
             width: 3.5rem;
             border-radius: 50%;
         }
+        header .titol-header {
+            font-size: 3rem;
+
+            color: red;
+
+            transition: opacity 0.3s;
+        }
+
+
         .content {
             width: 100%;
             padding-top: 7rem;
@@ -56,7 +71,7 @@
         .titol {
             font-size: calc(1.5rem + 3vw);
             text-align: center;
-            color: #8e0000;
+            color: red;
 
             margin-bottom: 3rem;
             padding: 0 1rem;
@@ -184,6 +199,8 @@
         <a href="/" class="boing">
             <img class="logo" src="https://jordimas96.github.io/assets_repo/logos-jmas/red.png" alt="logo">
         </a>
+
+        <div class="titol-header">Mad Jumpgate</div>
     </header>
 
     <section class="content p-3">
@@ -258,8 +275,6 @@
 
 
     <script>
-        if (!location.pathname.endsWith("index.html") && !location.pathname.endsWith("/"))
-            location.pathname += '/';
 
         function mostrarOverlay(sn) {
             document.querySelector(".contenidor-missatge-nomes-pc .missatge").style.display = sn ? "flex" : "none";
@@ -269,12 +284,14 @@
         let esPantallaTactil = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         mostrarOverlay(esPantallaTactil);
 
+
+        // Moure titol a barra //
+        window.addEventListener('scroll', () => {
+            document.querySelector("header .titol-header").style.opacity = window.scrollY > 150 ? 1 : 0
+        });
+
         
         
-        
-        function obrirCV(nomArxiu) {
-            location.assign(location.href + nomArxiu);
-        }
         
     </script>
 </body>
